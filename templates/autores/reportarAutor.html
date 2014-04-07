@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type = "text/css" href='{{STATIC_URL}}css/style.css'>
+	<title>Reportar Autor</title>
+</head>
+<body>
+	<h1>Todos los Autores--:)</h1>	
+	<br>
+		<ul>
+			<h2>juan</h2>
+			{% for autor in autores %}
+			<li><b>Nombre:</b> {{autor.nombre}} </li>
+			<li><b>Pais:</b> {{autor.pais}}</li>
+			<li><b>Descripcion:</b> {{autor.descripcion}}</li>
+			<li><b>Foto:</b><img src="{{MEDIA_URL}}{{autor.foto}}" alt=""></li>	
+			{% endfor %}		
+		</ul>		
+	</br>	
+	</ul>
+
+</body>
+</html>
